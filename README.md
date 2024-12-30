@@ -18,6 +18,9 @@ Not complete yet but im done for the day check back in a day or two.
 
  python3 app.py
 
+# Contributing
+
+Feel free to submit a pull request.
 
  # Credits
 
