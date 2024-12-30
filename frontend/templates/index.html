@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mySample</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+    <script>0</script>
+    <header class="header">
+      <nav class="navbar">
+        <h2 class="logo"><a href="#">mySample</a></h2>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </label>
+        <ul class="links">
+          
+        </ul>
+        <div class="buttons">
+          <a href="#" class="signin">Github</a>
+          <a href="#" class="signup">Donate</a>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-section">
+      <div class="hero">
+        {% for mesg in get_flashed_messages() %}
+      <h1>{{ mesg }}</h1>
+      {% endfor %}
+        <h2>Download and Convert any Song</h2>
+        <p>
+          We currently support Spotify, Soundcloud, and Youtube links. If you have an MP3 or WAV file you can use
+          that too!
+        </p>
+        <form method = 'POST' enctype=multipart/form-data>
+        <input type="text" name="link" placeholder="Song Link..">
+        <div class="buttons">
+          <input type="file" class="learn" name="file">
+          <button type="submit" class="join">Go</button>
+        </div>
+      </form>
+      </div>
+      <div class="img">
+        <img src="../static/images/randomgif.gif" alt="hero image" />
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <div class="footer-copyright text-center">&copy; Developed with ❤️</i> by
+      <a href="https://github.com/newpolygons" class="white-text" target="_blank">newpolygons</a>.
+    </div>
+  </footer>
+</html>
