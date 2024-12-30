@@ -17,3 +17,10 @@ Not complete yet but im done for the day check back in a day or two.
  pip3 install -r requirements.txt
 
  python3 app.py
+
+
+ # Credits
+
+ Stem Sep: DEMUCS
+ Audio to MIDI: Basic-Pitch
+ probably missing more they will be added
