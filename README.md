@@ -18,6 +18,9 @@ Not complete yet but im done for the day check back in a day or two.
 
  python3 app.py
 
+or python3 terminal.py for CLI
+
+
 # Contributing
 
 Feel free to submit a pull request.
@@ -25,5 +28,7 @@ Feel free to submit a pull request.
  # Credits
 
  Stem Sep: DEMUCS
+
  Audio to MIDI: Basic-Pitch
+
  probably missing more they will be added
