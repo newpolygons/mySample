@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 from threading import Timer
 
 currentDir = os.getcwd()
-uploadDir = os.path.join(currentDir, 'downloads')
+uploadDir = os.path.join(currentDir, 'tmp')
 allowedExtenstions = {'mp3', 'wav'}
 templateDir = os.path.abspath('frontend/templates')
 staticDir = os.path.abspath('frontend/static')

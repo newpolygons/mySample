@@ -3,7 +3,7 @@
 import os
 
 
-DOWNLOAD_DIR = os.path.join(os.getcwd(), 'downloads')
+DOWNLOAD_DIR = os.path.join(os.getcwd(), 'tmp')
 song = ''
 
 def youtube(link):
@@ -32,5 +32,12 @@ def spotify(link):
 
 def soundcloud(link):
     #https://github.com/scdl-org/scdl
-    return
+    print(os.system('scdl --no-playlist --overwrite --onlymp3 -l ' + link))
+    for file in os.listdir(DOWNLOAD_DIR):
+        if file.endswith('.mp3'):
+            helpers.convertToWav(os.path.join(DOWNLOAD_DIR, file))
+    for file in os.listdir(DOWNLOAD_DIR):
+        if file.endswith('.wav'):
+            song = helpers.safeFilename(DOWNLOAD_DIR, file)
+    return song
 
