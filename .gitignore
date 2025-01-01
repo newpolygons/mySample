@@ -1,9 +1,11 @@
 env/
 testing/
+__pycache__/
+separated/
 .DS_Store
 *.pyc
 *.pyo
 *.wav
 *.mp3
-__pycache__/
+*.mid
 .cache

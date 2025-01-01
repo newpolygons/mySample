@@ -1,6 +1,5 @@
 torch --index-url https://download.pytorch.org/whl/cpu
 torchaudio --index-url https://download.pytorch.org/whl/cpu
-tensorflow
 demucs
 basic-pitch
 yt-dlp
@@ -8,3 +7,4 @@ spotdl
 flask
 pydub
 python-slugify
+scdl

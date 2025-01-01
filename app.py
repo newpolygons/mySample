@@ -16,18 +16,24 @@ app = Flask(__name__, template_folder = templateDir, static_folder = staticDir)
 app.config['UPLOAD_FOLDER'] = uploadDir
 
 def allowed_file(filename):
-    #dont blow yourself up this runs locally :) 
+    #this runs locally :) 
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in allowedExtenstions
 
+
 def open_browser():
+    #comment the below line to stop browser from auto opening
     webbrowser.open_new("http://127.0.0.1:5000")
 
 @app.route('/', methods = ['POST', 'GET'])
 def frontendFunction():
+    helpers.cleanApplication()
     if request.method == "POST":
         d = request.form.to_dict()
         link = d.get("link")
         print(str(d))
+
+        # wrote this section while sleepy can it be improved?
+
         if 'file' not in request.files and  link == '':
             flash('Nothing submitted')
             return redirect(request.url)
