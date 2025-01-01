@@ -1,6 +1,6 @@
 # mySample
 
-Not complete yet but im done for the day check back in a day or two.
+Frontend downloading workflow partially working.
 
  Create Audio Stems, Midi Notes, and more from any song.
  
